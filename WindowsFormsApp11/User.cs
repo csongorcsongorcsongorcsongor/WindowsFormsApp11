@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WindowsFormsApp11
 {
-    class User
+    public class User
     {
         public static List<User> allUser = new List<User>();
         public string username { get; set; }

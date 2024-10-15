@@ -20,25 +20,39 @@ namespace WindowsFormsApp11
         }
         void start()
         {
+
             db = new dbHandler();
-            db.ReadAll();
             guna2TextBox2.PasswordChar = '*';
             guna2Button1.Click += LoginEvent;
             guna2Button2.Click += RegEvent;
         }
         void LoginEvent(object s, EventArgs e)
         {
+            db.ReadAll();
+
             foreach (User item in User.allUser)
             {
                 if (guna2TextBox1.Text == item.username && guna2TextBox2.Text == item.password)
                 {
-                    MessageBox.Show("Sikeres bejelentkezés");
+                    game G = new game(item);
+                    this.Hide();
+                    G.Show();
+                    G.FormClosing += (ss, ee) =>
+                    {
+                        Application.Exit();
+                    };
                     break;
                 }
             }
+
         }
         void RegEvent(object s, EventArgs e)
         {
+            User user = new User();
+            user.username = guna2TextBox1.Text;
+            user.password = guna2TextBox2.Text;
+            user.points = 0;
+            db.InsertOne(user);
 
         }
     }

@@ -17,7 +17,7 @@ namespace WindowsFormsApp11
         {
             string user = "root";
             string password = "";
-            string dbName = "kolbasz";
+            string dbName = "adatbazis";
             string host = "localhost";
             string connectionString = $"host={host};username={user};password={password};database={dbName};";
             connection = new MySqlConnection(connectionString);
@@ -71,11 +71,11 @@ namespace WindowsFormsApp11
                 command.ExecuteNonQuery();
                 command.Dispose();
                 connection.Close();
-                
+                MessageBox.Show("Sikeres regisztráció", "Siker");
             }
             catch (Exception e)
             {
-                MessageBox.Show(e.Message);
+                MessageBox.Show($"Sikertelen regisztráció. Hibakód: {e.Message}", "Error");
             }
         }
 
