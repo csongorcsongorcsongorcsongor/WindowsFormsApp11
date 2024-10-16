@@ -36,6 +36,7 @@ namespace WindowsFormsApp11
                 {
                     game G = new game(item);
                     this.Hide();
+                    
                     G.Show();
                     G.FormClosing += (ss, ee) =>
                     {
