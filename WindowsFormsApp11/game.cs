@@ -138,8 +138,7 @@ namespace WindowsFormsApp11
             train.Height = 200;
             train.Width = 105;
             train.BackColor = Color.DarkRed;
-            train.Image = Image.FromFile("hev.png");
-            train.SizeMode = PictureBoxSizeMode.StretchImage;
+            
             Controls.Add(train);
             train.Location = new Point((this.Width - train.Width) / 2, this.Top - train.Height);
            
