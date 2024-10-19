@@ -142,7 +142,6 @@ namespace WindowsFormsApp11
             train.SizeMode = PictureBoxSizeMode.StretchImage;
             Controls.Add(train);
             train.Location = new Point((this.Width - train.Width) / 2, this.Top - train.Height);
-            log($"{train.Location.X}");
            
             countdownTime = r.Next(10, 30); 
             trainCountdownLabel.Text = $"Vonat érkezik: {countdownTime} másodperc."; 
@@ -172,7 +171,6 @@ namespace WindowsFormsApp11
                 {
                     trainattack.Stop(); 
                     train.Top = -200; 
-                    log($"{train.Location.Y}");
                     countdownTime = r.Next(10, 30);
                     trainCountdownLabel.Text = $"Vonat érkezik: {countdownTime} másodperc.";
                 }
@@ -197,10 +195,7 @@ namespace WindowsFormsApp11
             oneCar.Location = new Point(-oneCar.Width, (this.Height - oneCar.Height) / 2);
 
         }
-        void log(string message)
-        {
-            listBox1.Items.Add($"{message} . {DateTime.Now}");
-        }
+        
 
     }
 }

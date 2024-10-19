@@ -31,7 +31,6 @@ namespace WindowsFormsApp11
         {
             this.label1 = new System.Windows.Forms.Label();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
-            this.listBox1 = new System.Windows.Forms.ListBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -76,14 +75,6 @@ namespace WindowsFormsApp11
             this.guna2Button1.Size = new System.Drawing.Size(88, 27);
             this.guna2Button1.TabIndex = 1;
             this.guna2Button1.Text = "Close Gate";
-            // 
-            // listBox1
-            // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(734, 9);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(54, 95);
-            this.listBox1.TabIndex = 2;
             // 
             // pictureBox1
             // 
@@ -170,7 +161,6 @@ namespace WindowsFormsApp11
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.listBox1);
             this.Controls.Add(this.guna2Button1);
             this.Controls.Add(this.label1);
             this.Name = "game";
@@ -192,7 +182,6 @@ namespace WindowsFormsApp11
 
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
-        private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
